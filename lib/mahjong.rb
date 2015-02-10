@@ -13,4 +13,9 @@ class Mahjong
     end
     count
   end
+
+  # 雀頭：階段数の個数
+  def self.jantou_count(tehai)
+
+  end
 end

@@ -8,4 +8,8 @@ describe "Mahjong" do
   describe "#kootu_count" do
     it_is_asserted_by{ Mahjong.kootu_count(tehai) == 1 }
   end
+
+  describe "#jantou_count" do
+    it_is_asserted_by{ Mahjong.jantou_count(tehai) == 2 }
+  end
 end
