@@ -16,6 +16,11 @@ class Mahjong
 
   # 雀頭：階段数の個数
   def self.jantou_count(tehai)
-
+    count = 0
+    tehai.chars.each do |char|
+      current_jantou = "#{char}#{char.succ}#{char.succ.succ}"
+      count += 1 if tehai.include?(current_jantou)
+    end
+    count
   end
 end
