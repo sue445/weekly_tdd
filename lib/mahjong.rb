@@ -17,6 +17,7 @@ class Mahjong
 
   # 雀頭：階段数の個数
   def self.jantou_count(tehai)
+    # TODO: 漢数字の場合が不完全
     count = 0
     tehai.chars.each do |char|
       current_jantou = "#{char}#{char.succ}#{char.succ.succ}"
