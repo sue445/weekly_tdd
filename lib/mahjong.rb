@@ -1,5 +1,6 @@
 class Mahjong
   def self.agari?(tehai)
+    # 3x4+2 = 14
     kootu_count(tehai) + jantou_count(tehai) == 4
   end
 
