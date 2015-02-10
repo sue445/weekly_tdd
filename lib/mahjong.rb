@@ -1,9 +1,5 @@
 class Mahjong
-  def initialize(tehai)
-    @tehai = tehai
-  end
-
-  def agari?
+  def self.agari?
 
   end
 
