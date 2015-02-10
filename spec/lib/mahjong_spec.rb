@@ -1,7 +1,7 @@
 describe "Mahjong" do
   let(:tehai){ "七七七②③④⑧⑧４５６" }
 
-  xdescribe "#agari?" do
+  describe "#agari?" do
     it_is_asserted_by{ Mahjong.agari?(tehai) == true }
   end
 
