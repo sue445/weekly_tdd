@@ -1,6 +1,6 @@
 class Mahjong
   def self.agari?(tehai)
-    kootu_count(tehai) + jantou_count(tehai) == 3
+    kootu_count(tehai) + jantou_count(tehai) == 4
   end
 
   # 刻子: 同じ牌が3つ揃っている個数
