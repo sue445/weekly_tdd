@@ -23,6 +23,17 @@ describe "Mahjong" do
   end
 
   describe "#jantou_count" do
-    it_is_asserted_by{ Mahjong.jantou_count(tehai) == 2 }
+    using RSpec::Parameterized::TableSyntax
+
+    where(:tehai, :expected) do
+      "②③④七七七⑧⑧４４４①①①" | 1  # 丸付数字だけ
+      "一二三②②②⑧⑧４４４①①①" | 1  # 漢数字だけ
+      "１２３②②②⑧⑧４４４①①①" | 1  # アラビア数字だけ
+      "一二三②③④⑧⑧４５６①①①" | 3  # 全部
+    end
+
+    with_them do
+      it_is_asserted_by{ Mahjong.jantou_count(tehai) == expected }
+    end
   end
 end
